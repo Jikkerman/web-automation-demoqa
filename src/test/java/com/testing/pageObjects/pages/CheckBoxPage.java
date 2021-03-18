@@ -12,16 +12,16 @@ public class CheckBoxPage extends ElementsPage {
   // Locators ----------------------------------------------------------------------------------------------------------
 
   // The button that looks like "Pluss sign"
-  public static By EXPAND_BUTTON;
+  public static By EXPAND_BUTTON = css("button[title='Expand all']");
   // Self explanatory
-  public static By CHECK_BOX_TITLE;
+  public static By CHECK_BOX_TITLE = text("Check Box");
   // Find selector for each checkbox
-  public static By COMMANDS;
-  public static By ANGULAR;
-  public static By CLASSIFIED;
-  public static By EXCEL_FILE;
+  public static By COMMANDS = css("label[for='tree-node-commands']");
+  public static By ANGULAR= css("label[for='tree-node-angular']");
+  public static By CLASSIFIED= css("label[for='tree-node-classified']");
+  public static By EXCEL_FILE= css("label[for='tree-node-excelFile']");
   // After user selects different options, a string is shown to user containing ALL the selected options.
-  public static By RESULT;
+  public static By RESULT= css("div[id='result']");
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
     getElement(CHECK_BOX_TITLE).waitUntilPresent();

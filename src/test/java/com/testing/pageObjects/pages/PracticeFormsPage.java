@@ -12,22 +12,22 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("/automation-practice-form")
 public class PracticeFormsPage extends FormsPage{
   // Locators ----------------------------------------------------------------------------------------------------------
-  public static By MOBILE_NUMBER_FIELD;
-  public static By SUBJECT_FIELD;
-  public static By MALE_RADIO_BUTTON;
-  public static By FEMALE_RADIO_BUTTON;
-  public static By OTHER_RADIO_BUTTON;
-  public static By SPORTS_CHECKBOX;
-  public static By READING_CHECKBOX;
-  public static By MUSIC_CHECKBOX;
-  public static By STATE_FIELD;
-  public static By CITY_FIELD;
+  public static By MOBILE_NUMBER_FIELD  = id("userNumber");
+  public static By SUBJECT_FIELD = css("input[id='subjectsInput']");
+  public static By MALE_RADIO_BUTTON = css("input[value='Male']");
+  public static By FEMALE_RADIO_BUTTON = css("input[value='Female']");
+  public static By OTHER_RADIO_BUTTON = css("input[value='Other']");
+  public static By SPORTS_CHECKBOX = id("hobbies-checkbox-1");
+  public static By READING_CHECKBOX = id("hobbies-checkbox-2");
+  public static By MUSIC_CHECKBOX = id("hobbies-checkbox-3");
+  public static By STATE_FIELD = css("div[class=' css-1wa3eu0-placeholder']");
+  public static By CITY_FIELD = id("city");
   public static By SUBJECTS_MENU;
   // After user clicks submit button, a dialog box containing rows with information is shown to user,
   // find selector for rows only without the first "Title" row. Should be around total of 10.
-  public static By TABLE_ROW;
-  public static By DATE_OF_BIRTH;
-  public static By UPLOAD_PICTURE;
+  public static By TABLE_ROW = css("tbody tr");
+  public static By DATE_OF_BIRTH = id("dateOfBirthInput");
+  public static By UPLOAD_PICTURE = id("uploadPicture");
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
     getElement(FORMS).waitUntilPresent();

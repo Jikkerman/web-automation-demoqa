@@ -5,7 +5,7 @@ Feature: DemoQA - Elements page
     And   I click "Elements"
     Then  I am on the "Elements" page
 
-  @run
+
   Scenario: Text Box
     When I click "Text Box option"
     And  I set "Full Name field" to "Donald Biden"
