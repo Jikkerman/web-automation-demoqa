@@ -21,7 +21,7 @@ Feature: DemoQA - Alerts, Frame And Windows page
     When I click "Alerts option"
     And  I click "Alert button"
     Then Alert window should contain "You clicked a button"
-  @run
+
   Scenario: Alerts - see alert after 5 seconds
     When I click "Alerts option"
     And  I click "Timer Alert button"

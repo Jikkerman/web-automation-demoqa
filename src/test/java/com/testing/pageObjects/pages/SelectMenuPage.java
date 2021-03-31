@@ -12,17 +12,17 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("/select-menu")
 public class SelectMenuPage extends WidgetsPage{
   // Locators ----------------------------------------------------------------------------------------------------------
-  public static By SELECT_MENU_TITLE;
-  public static By SELECT_VALUE;
-  public static By SELECT_ONE;
-  public static By OLD_STYLE_SELECT_MENU;
-  public static By MULTISELECT_DROP_DOWN;
+  public static By SELECT_MENU_TITLE= text("Select Menu");
+  public static By SELECT_VALUE= id("withOptGroup");
+  public static By SELECT_ONE= id("selectOne");
+  public static By OLD_STYLE_SELECT_MENU= id("oldSelectMenu");
+  public static By MULTISELECT_DROP_DOWN= css("div[class='css-1rhbuit-multiValue']");
   // Field containing selected values. Might need an xpath selector
-  public static By MULTISELECT_DROP_DOWN_VALUES;
-  public static By VOLVO;
-  public static By SAAB;
-  public static By OPEL;
-  public static By AUDI;
+  public static By MULTISELECT_DROP_DOWN_VALUES= css("div[class=' css-2613qy-menu']");
+  public static By VOLVO= text("volvo");
+  public static By SAAB= text("saab");
+  public static By OPEL= text("opel");
+  public static By AUDI= text("audi");
   // Selector that would allow to get either of given four car brands.
   public static By CAR_MENU_OPTIONS;
   // Public methods ----------------------------------------------------------------------------------------------------

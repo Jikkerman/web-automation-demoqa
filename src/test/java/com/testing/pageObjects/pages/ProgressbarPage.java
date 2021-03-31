@@ -10,9 +10,9 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("/progress-bar")
 public class ProgressbarPage extends WidgetsPage{
   // Locators ----------------------------------------------------------------------------------------------------------
-  public static By PROGRESS_BAR_TITLE;
-  public static By START_STOP_BUTTON;
-  public static By PROGRESS_BAR;
+  public static By PROGRESS_BAR_TITLE= text("Progress Bar");
+  public static By START_STOP_BUTTON= id("startStopButton");
+  public static By PROGRESS_BAR= id("progressBar");
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
     getElement(PROGRESS_BAR_TITLE).waitUntilPresent();
